@@ -534,6 +534,17 @@
             <element href="//0/@process/@activity/@activity/@links/@children.3"/>
             <bendpoints points="[21, 25, -73, -87]$[73, 88, -21, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[16, -24, -75, 113]$[75, -112, -16, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -563,6 +574,7 @@
                 <bpws:link name="LogToLog1" tibex:linkType="SUCCESS"/>
                 <bpws:link name="LogToLog2" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Log1ToLog3" tibex:linkType="SUCCESS"/>
+                <bpws:link name="Log3ToLog2" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -667,6 +679,7 @@
                     tibex:xpdlId="475fd62d-66dc-4e0c-8da4-1f474dd62fb3" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="LogToLog2"/>
+                        <bpws:target linkName="Log3ToLog2"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -698,6 +711,9 @@
                     <bpws:targets>
                         <bpws:target linkName="Log1ToLog3"/>
                     </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="Log3ToLog2"/>
+                    </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log3-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;&amp;quot;sdsds&amp;quot;&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
