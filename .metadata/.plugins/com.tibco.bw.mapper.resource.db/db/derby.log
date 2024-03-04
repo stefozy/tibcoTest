@@ -1,0 +1,6 @@
+----------------------------------------------------------------
+2024-03-04 20:32:52.181 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance a816c00e-018e-0b2b-513b-ffffccf596f3
+on database directory C:\Users\StefanoGallo\testGit\.metadata\.plugins\com.tibco.bw.mapper.resource.db\db\DoesNotExist  
+
+Database Class Loader started - derby.database.classpath=''
